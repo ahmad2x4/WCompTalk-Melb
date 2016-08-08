@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "react": "^15.0.2",
-    "webcomponentsjs": "^0.7.22"
+    "webcomponentsjs": "^0.7.22",
+    "babel": "^5.8.38"
   }
 }
