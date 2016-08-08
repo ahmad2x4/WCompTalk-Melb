@@ -1,0 +1,16 @@
+{
+  "name": "react-15.0.2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "static . --port 8484"
+  },
+  "author": "Ahmadreza Atighechi <ara.mailbox@gmail.com> (http://ahmadreza.com/)",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.9.0"
+  }
+}

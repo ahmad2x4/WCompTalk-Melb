@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web components - Presentation</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    <style>
+    .green {
+        color: lightgreen;
+    }
+    
+    .red {
+        color: red;
+    }
+    
+    .yellow {
+        color: yellow;
+    }
+    
+    .supported {
+        background-color: green;
+        text-align: center;
+    }
+    
+    .not-supported {
+        background-color: red;
+    }
+    
+    .warning {
+        background-color: yellow;
+        color: black;
+    }
+    
+    .warning small {
+        font-size: 14pt;
+    }
+    
+    .white {
+        background-color: white;
+    }
+    
+    .reveal section img.no-border {
+        border: inherit;
+        box-shadow: inherit;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <table>
+                    <tr>
+                        <td>
+                            <h4>WebComponents and modern web frameworks</h4></td>
+                        <td><img src="assets/img/logo_wc-1.png" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>Ahmad Atighechi <a href="http://twitter.com/ahmad2x4">@ahmad2x4</a></h3></td>
+                        <td><span class="white" class="white"><img src="assets/img/sponsor-readify.png"></span></td>
+                    </tr>
+                </table>
+                </p>
+            </section>
+            <section>
+                <h2>Component !?</h2>
+                <p>
+                    <img src="assets/img/tvision.gif" alt="Turbo Vison">
+                    <br/>
+                    <small class="fragment">Turbo Vision (text base UI control set)</small>
+                </p>
+            </section>
+            <section>
+                <h2>Talking about web !?</h2>
+                <p>
+                    <img src="assets/img/interdev.jpg" alt="Turbo Vison">
+                    <br/>
+                    <small class="fragment">Visual InterDev (calendar component)    </small>
+                </p>
+            </section>
+            <section>
+                <h2>Recent technologies</h2>
+                <pre><code>
+              &lt;/div&gt;                      
+            &lt;/div&gt;                        
+          &lt;/div&gt;                       
+        &lt;/div&gt;                        
+      &lt;/div&gt;                      
+    &lt;/div&gt;                        
+  &lt;/div&gt;                      
+&lt;/div&gt;                        
+                    </code></pre>
+                <small>Probably a twitter bootstrap page</small>
+            </section>
+            <section>
+                <h4>Why do we need web components?</h4>
+                <p>Current developers' experience in reusing widgets is really poor</p>
+            </section>
+            <section>
+                <h1>How does Web Components (WC) help?</h1>
+                <h2 class="fragment">Encapsulation</h2>
+                <h2 class="fragment">Componentization</h2>
+            </section>
+            <section>
+                <h2>Encapsulation</h2>
+                <h2 data-fragment-index="1">Why?</h2>
+                <h2 class="fragment" data-fragment-index="2">Current Encapsulation method</h2>
+                <pre class="fragment" data-fragment-index="2"><code data-trim contenteditable>
+&lt;iframe src="foo.htm"&gt;&lt;/iframe&gt;
+                    </code></pre>
+            </section>
+            <section>
+                <h1>Componentization</h1>
+                <ul>
+                    <li class="fragment">Complexity Management</li>
+                    <li class="fragment">Product Flexibility</li>
+                    <li class="fragment">Collaboration</li>
+                    <li class="fragment">Easier to reason about your code</li>
+                </ul>
+            </section>
+            <section>
+                <h2>What are web components?</h2>
+                <h3>A set of HTML5 standards</h3>
+                <ul>
+                    <li class="fragment" data-fragment-index="1">Shadow DOM<i class="fragment yellow" data-fragment-index="5"> In progress (V1 milestone)</i></li>
+                    <li class="fragment" data-fragment-index="2">HTML Templates <i class="fa fa-check fragment green" data-fragment-index="5" aria-hidden="true"></i></li>
+                    <li class="fragment" data-fragment-index="3">Custom Element<i class="fragment yellow" data-fragment-index="5"> In progress  (V1 milestone)</i></li>
+                    <li class="fragment" data-fragment-index="4">HTML Import<i class="fragment yellow" data-fragment-index="5"> In progress</i></li>
+                </ul>
+            </section>
+            <section>
+                <h1>Shadow DOM</h1>
+                <div class="fragment" data-fragment-index="1" style="text-align:left;margin:0 auto;background-color:green; width:60%;height:300px;padding:15px">
+                    Element <span class="fragment" data-fragment-index="3">(shadow host)</span>
+                    <div class="fragment" data-fragment-index="2" style="text-align:left;margin:0 auto;background-color:blue; width:90%;height:70%;padding:15px">
+                        Shadow Root
+                        <div class="fragment" data-fragment-index="4" style="text-align:left;margin:0 auto;background-color:red; width:90%;height:50%;padding:15px">
+                            Shadow Tree
+                        </div>
+                    </div>
+                </div>
+                <small class="fragment">Shadow tree has encapsulation</small>
+            </section>
+            <section>
+                <h1>Shadow DOM</h1>
+                <img src="assets/img/ShadowDOM.png" alt="">
+            </section>
+            <section>
+                <h1>Example</h1>
+                <video data-autoplay controls muted loop>
+                    <source data-src="video/Zootopia_Official_Sloth_Trailer_2016_Jason_Bateman.ogv">
+                </video>
+            </section>
+            <section>
+                <h1>HTML Templates</h1>
+                <pre class="fragment"><code>
+<template id="foo">
+    <img src="img.png" alt="image">
+    <h1>Hello World</h1>
+</template>
+<div id="container">
+</div>
+                    </code></pre>
+                <pre class="fragment"><code data-trim contenteditable>
+var template = document.querySelector('#foo');
+var container = document.querySelector('#container');
+var clone = document.importNode(template.content, true);
+//Creating shadow root and appending cloned template
+var root = container.createShadowRoot();
+root.appendChild(clone);
+                    </code></pre>
+                <pre class="fragment"><code data-trim contenteditable>
+//To check if browser support native template
+if ('content' in document.createElement('template')){
+    
+}
+                    </code></pre>
+                <small class="fragment">Note: Default template implementation doesn't come with <i>if</i>, <i>repeat</i></small>
+                <aside class="notes">
+                    Server side / Client side
+                    <ul>
+                        <li>Underscore template</li>
+                        <li>Mustache JS</li>
+                        <li>Handlebar</li>
+                    </ul>
+                    <p>Native browser suport</p>
+                    <p>Inert</p>
+                </aside>
+            </section>
+            <section>
+                <h1>Custom Element</h1>
+                <div class="fragment">
+                    <h2>&lt;li/&gt;</h2>
+                    <h2>&lt;p/&gt;</h2>
+                    <h2>&lt;div/&gt;</h2>
+                    <h2>&lt;h1/&gt;</h2>
+                </div>
+            </section>
+            <section>
+                <img src="assets/img/StackOverflow.png" style="width:70%" alt="">
+            </section>
+            <section>
+                <h1>Readable markup</h1>
+                <pre><code>
+<stack-question favored="true" rank="3">
+    <h1>How do I use WebComponent in my HTML page</h1>
+    <stack-comment>Comment 2</stack-comment>
+    <stack-comment>Comment 2</stack-comment>
+    <stack-answer rank="3" answer="true">Asnwer 1
+        <stack-comment>Commnet 3</stack-comment>
+    </stack-answer>
+</stack-question>
+                    </code></pre>
+            </section>
+            <section>
+                <h2>Custom Element (Definition)</h2>
+                <pre><code>var XFavButton = document.registerElement('stack-favorite-button');
+document.body.appendChild(new XFavButton());
+</code></pre>
+                <p class="fragment">Or</p>
+                <pre class="fragment"><code>var XFavButton = document.registerElement('stack-favorite-button',{
+        prototype: Object.create(HTMLButtonElement.prototype),
+        extends: 'button'
+    }
+);
+document.body.appendChild(new XFavButton());
+</code></pre>
+            </section>
+            <section>
+                <h1>HTML Import</h1>
+                <div class="fragment"><pre>javascript..... &lt;script/&gt;</pre></div>
+                <div class="fragment"><pre>image.......... &lt;img/&gt;</pre></div>
+                <div class="fragment"><pre>css............ &lt;link/&gt;</pre></div>
+                <div class="fragment"><pre>video.......... &lt;video/&gt;</pre></div>
+                <div class="fragment"><pre>HTML........... ????   </pre></div>
+            </section>
+            <section>
+                <h2>HTML Import (Basics)</h2>
+                <pre><code>
+&lt;head&gt;
+    &lt;link rel="import" href="/path/to/imports/stuff.html"&gt;
+&lt;/head&gt;
+</code></pre>
+            </section>
+            <section>
+                <h2>How to use imported HTML</h2>
+                <code><pre>
+&lt;script&gt;
+    var link = document.querySelector('link[rel="import"]');
+    var content = link.import;
+
+    // Clone the &lt;template&gt; in the import.
+    var template = content.querySelector('template');
+    var clone = document.importNode(template.content, true);
+
+    document.querySelector('#container').appendChild(clone);
+&lt;/script&gt;
+                    </code></pre>
+            </section>
+            <section>
+                <h1>Browser support</h1>
+                <table>
+                    <tr>
+                        <td></td>
+                        <td>Chrome</td>
+                        <td>Opera</td>
+                        <td>Firefox</td>
+                        <td>Safari</td>
+                        <td>Edge</td>
+                    </tr>
+                    <tr>
+                        <td><small>Templates</small></td>
+                        <td class="supported">26</td>
+                        <td class="supported">15</td>
+                        <td class="supported">22</td>
+                        <td class="supported">7.1</td>
+                        <td class="supported">13</td>
+                    </tr>
+                    <tr>
+                        <td><small>HTML Imports</small></td>
+                        <td class="supported">36</td>
+                        <td class="supported">23</td>
+                        <td class="warning"><small>On Hold</small></td>
+                        <td class="not-supported"></td>
+                        <td class="not-supported"><small>Low</small></td>
+                    </tr>
+                    <tr>
+                        <td><small>Custom Elements</small></td>
+                        <td class="supported">33</td>
+                        <td class="supported">20</td>
+                        <td class="warning"><small>Behind Flag</small></td>
+                        <td class="not-supported"><small>in dev</small></td>
+                        <td class="not-supported"><small>Medium</small></td>
+                    </tr>
+                    <tr>
+                        <td><small>Shadow DOM</small></td>
+                        <td class="supported">25</td>
+                        <td class="supported">15</td>
+                        <td class="warning"><small>Behind Flag</small></td>
+                        <td class="not-supported"><small>in dev</small></td>
+                        <td class="not-supported"><small>High</small></td>
+                    </tr>
+                </table>
+                <p class="fragment">What does community do with in-progress standard?</p class="fragment">
+            </section>
+            <section>
+                <h1>Polyfill</h1>
+                <p>Webcomponentjs</p>
+                <pre>
+                    bower install --save webcomponentsjs
+                </pre>
+            </section>
+            <section>
+                <h1>Demo</h1>
+            </section>
+            <section>
+                <h3>Standard Compatibility</h3>
+                <table>
+                    <tr>
+                        <td>Shadow DOM</td>
+                        <td><i class="fa fa-check fragment green" data-fragment-index="1" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                        <td>HTML Import</td>
+                        <td><i class="fa fa-check fragment green" data-fragment-index="2" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                        <td>HTML Template</td>
+                        <td><i class="fa fa-check fragment green" data-fragment-index="3" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Custom Element</td>
+                        <td><i class="fa fa-check fragment green" data-fragment-index="4" aria-hidden="true"></i></td>
+                    </tr>
+                </table>
+            </section>
+            <section>
+                <h2>Webcomponents-lite</h2>
+                <table>
+                    <tr>
+                        <td>Shadow DOM</td>
+                        <td><i class="fa fa-times fragment red" data-fragment-index="1" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                        <td>HTML Import</td>
+                        <td><i class="fa fa-check fragment green" data-fragment-index="1" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                        <td>HTML Template</td>
+                        <td><i class="fa fa-check fragment green" data-fragment-index="1" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Custom Element</td>
+                        <td><i class="fa fa-check fragment green" data-fragment-index="1" aria-hidden="true"></i></td>
+                    </tr>
+                </table>
+                <p>Includes all polyfills except for shadow DOM.</p>
+            </section>
+            <section>
+                <h1>Angular 2</h1>
+                <img src="assets/img/shield-large.png">
+            </section>
+            <section>
+                <h1>Demo</h1>
+            </section>
+            <section>
+                <h3>Standard Compatibility</h3>
+                <table>
+                    <tr>
+                        <td>Shadow DOM</td>
+                        <td><i class="fa fa-times fragment red" data-fragment-index="1" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                        <td>HTML Import</td>
+                        <td><i class="fa fa-times fragment red" data-fragment-index="2" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                        <td>HTML Template</td>
+                        <td><i class="fa fa-times fragment red" data-fragment-index="3" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Custom Element</td>
+                        <td><i class="fa fa-info fragment yellow" data-fragment-index="4" aria-hidden="true"></i></td>
+                    </tr>
+                </table>
+            </section>
+            <section>
+                <h1>Polymer</h1>
+                <img src="assets/img/Polymer-Logo-Mark.png" style="background-color:white;" width="50%" height="50%">
+            </section>
+            <section>
+                <h1>Demo</h1>
+            </section>
+            <section>
+                <section>
+                    <h3>Standard Compatibility</h3>
+                    <table>
+                        <tr>
+                            <td>Shadow DOM</td>
+                            <td><i class="fa fa-info fragment yellow" data-fragment-index="1" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>HTML Import</td>
+                            <td><i class="fa fa-check fragment green" data-fragment-index="2" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>HTML Template</td>
+                            <td><i class="fa fa-check fragment green" data-fragment-index="3" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Custom Element</td>
+                            <td><i class="fa fa-check fragment green" data-fragment-index="4" aria-hidden="true"></i></td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h3>MOAR about Polymer</h3>
+                    <ul>
+                        <li class="fragment">Registration and manage lifecycle of elements</li>
+                        <li class="fragment">Extend native HTML</li>
+                        <li class="fragment">Two-way binding and attribute reflection</li>
+                        <li class="fragment">Responsive to property and attribute change</li>
+                        <li class="fragment">Local DOM</li>
+                        <li class="fragment">Events</li>
+                        <li class="fragment">Behaviors</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h1>Links:</h1>
+                <ul>
+                    <li><a href="http://angular.io">http://angular.io</a></li>
+                    <li><a href="http://webcomponents.org">http://webcomponents.org</a></li>
+                    <li><a href="http://github.com/webcomponents">http://github.com/webcomponents</a></li>
+                    <li><a href="http://polymer-project.org">http://polymer-project.org</a></li>
+                    <li><a href="http://elements.polymer-project.org/">http://elements.polymer-project.org/</a></li>
+                    <li><a href="http://customelements.io">http://customelements.io</a></li>
+                </ul>
+            </section>
+            <section>
+                <h1>QA</h1>
+            </section>
+            <section>
+                <img src="assets/img/qrcode.png">
+                <h4>Slides http://ahmad2x4.github.io/WCompTalk</h4>
+            </section>
+            <section data-autoslide="1500" data-transition="fade-out" data-background="white">
+                <h3>DDDSydney Thanks our sponsors</h3>
+            </section>
+            <section data-background="white" data-transition="fade-in">
+                <img src="assets/img/sponsors.png" class="no-border">
+            </section>
+        </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [{
+            src: 'lib/js/classList.js',
+            condition: function() {
+                return !document.body.classList;
+            }
+        }, {
+            src: 'plugin/markdown/marked.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/markdown/markdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            condition: function() {
+                return !!document.querySelector('pre code');
+            },
+            callback: function() {
+                hljs.initHighlightingOnLoad();
+            }
+        }, {
+            src: 'plugin/zoom-js/zoom.js',
+            async: true
+        }, {
+            src: 'plugin/notes/notes.js',
+            async: true
+        }]
+    });
+    </script>
+</body>
+
+</html>

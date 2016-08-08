@@ -1,0 +1,12 @@
+{
+  "name": "webcomponent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  	"start": "static . --port 8181",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ahmadreza Atighechi <ara.mailbox@gmail.com> (http://ahmadreza.com/)",
+  "license": "ISC"
+}

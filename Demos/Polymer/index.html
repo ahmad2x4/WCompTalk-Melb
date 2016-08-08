@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Polymer example</title>
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="components/blog-post.html">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+  </head>
+  <body>
+    <h1>Polymer</h1>
+    <div class="card card-2">
+        <!--  Using custom element -->
+        <blog-post post-title="This is blog post title">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pharetra tempus enim vel ultricies. Sed dignissim id quam ac elementum. Integer est sapien, auctor vitae suscipit facilisis, fermentum in enim. Pellentesque placerat, lacus vitae egestas lobortis, leo tortor eleifend enim, sit amet vehicula tellus dui sit amet ex. Duis congue magna auctor velit tempor, a posuere justo imperdiet. Nulla at iaculis nibh, vel vulputate est.</p>
+        </blog-post>
+    </div>
+    <div class="card card-2">
+        <blog-post post-title="First post">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pharetra tempus enim vel ultricies. Sed dignissim id quam ac elementum. Integer est sapien, auctor vitae suscipit facilisis, fermentum in enim. Pellentesque placerat, lacus vitae egestas lobortis, leo tortor eleifend enim, sit amet vehicula tellus dui sit amet ex. </p>
+        </blog-post>
+    </div>
+    <!-- this is a paragraph to test css encapsulation and shadow DOM -->
+    <p class="center">This paragraph is outside of shadow dom</p>
+
+  </body>
+</html>

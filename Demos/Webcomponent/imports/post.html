@@ -1,0 +1,42 @@
+<template id="template">
+    <style>
+    /* this will only be applied to <p> tags inside shadow DOM */
+    ::content > p {
+        color: red;
+    }
+    </style>
+    <h3 id="header"></h3>
+    <!-- will include content of custom element  -->
+    <content></content>
+</template>
+<script>
+(function() {
+    // accessing owner document which is this file
+    var importDoc = document._currentScript.ownerDocument; // importee
+
+    // Define and register <shadow-element>
+    // that uses Shadow DOM and a template.
+    var proto = Object.create(HTMLElement.prototype);
+
+    // in created callback we set up the element
+    proto.createdCallback = function() {
+        // get template in import
+        var template = importDoc.querySelector('#template');
+
+        // import template
+        var clone = document.importNode(template.content, true);
+
+        //Creating shadow root and appending cloned template
+        var root = this.createShadowRoot();
+        root.appendChild(clone);
+
+        var header = root.querySelector('#header');
+        header.innerHTML = this.getAttribute('post-title');
+    };
+
+    //simply register element and pass the prototype
+    document.registerElement('blog-post', {
+        prototype: proto
+    });
+})();
+</script>

@@ -1,0 +1,21 @@
+{
+  "name": "react-15.0.2",
+  "authors": [
+    "Ahmadreza <ara.mailbox@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "^15.0.2",
+    "webcomponentsjs": "^0.7.22"
+  }
+}

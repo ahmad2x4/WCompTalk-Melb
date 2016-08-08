@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Webcomponentjs example</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+    <!-- referencing webcomponents.js (polyfill) in page -->
+    <script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <!--  importing an HTML which contains custom element definition -->
+    <link rel="import" href="/imports/post.html">
+</head>
+
+<body>
+    <h1>WebcomponentJS</h1>
+    <div class="card card-2">
+        <!--  Using custom element -->
+        <blog-post post-title="This is blog post title">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pharetra tempus enim vel ultricies. Sed dignissim id quam ac elementum. Integer est sapien, auctor vitae suscipit facilisis, fermentum in enim. Pellentesque placerat, lacus vitae egestas lobortis, leo tortor eleifend enim, sit amet vehicula tellus dui sit amet ex. Duis congue magna auctor velit tempor, a posuere justo imperdiet. Nulla at iaculis nibh, vel vulputate est.</p>
+        </blog-post>
+    </div>
+    <div class="card card-2">
+        <blog-post post-title="First post">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pharetra tempus enim vel ultricies. Sed dignissim id quam ac elementum. Integer est sapien, auctor vitae suscipit facilisis, fermentum in enim. Pellentesque placerat, lacus vitae egestas lobortis, leo tortor eleifend enim, sit amet vehicula tellus dui sit amet ex. </p>
+        </blog-post>
+    </div>
+    <!-- this is a paragraph to test css encapsulation and shadow DOM -->
+    <p class="center">This paragraph is outside of shadow dom</p>
+</body>
+
+</html>

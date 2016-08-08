@@ -1,0 +1,20 @@
+<!-- import polymer library -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<dom-module id="blog-post">
+    <style>
+    /* this will only be applied to <p> tags inside scoped DOM */
+    
+    ::content > p {
+        color: red;
+    }
+    </style>
+    <template>
+        <h3>{{postTitle}}</h3> 
+        <content></content>
+    </template>
+    <script>
+    Polymer({
+        is: "blog-post"
+    });
+    </script>
+</dom-module>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Basic Example Reac JSX with webcomponents</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+
+  <body>
+    <h1>React</h1>
+    <div id="container">Loading ...</div>
+    <p class="center">This paragraph is outside of scoped style</p>
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+    <script src="bower_components/babel-core/browser.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <!--  importing an HTML which contains custom element definition -->
+    <link rel="import" href="app/components/post.html">    
+    <script type="text/babel" src="app/app.js"></script>
+  </body>
+</html>
