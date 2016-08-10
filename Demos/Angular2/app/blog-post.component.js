@@ -6,6 +6,8 @@
         ng.core.Component({
             selector: 'blog-post',
             templateUrl: 'app/blog-post.html',
+            //encapsulation: ng.core.ViewEncapsulation.Native,
+            //encapsulation: ng.core.ViewEncapsulation.None,
             inputs : ['postTitle'], // Equivalent to @Input('myValue')
             styles: ['p { color: red; }'],  //scoped style see document header -> style
         })
